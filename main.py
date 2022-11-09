@@ -1,5 +1,4 @@
 #  uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-# uvicorn main:app --host 165.22.3.172 --port 8000 --reload
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from rec import reccomend,get_title,show_move,get_genres
