@@ -1,5 +1,7 @@
 reccomend ยังไง
-![IMG_4314](https://user-images.githubusercontent.com/98101484/201359838-c45e4c48-0f93-47c6-8f26-bcde0aff2542.JPG)
+![IMG_4314](https://user-images.githubusercontent.com/98101484/201359971-6f942d75-f813-47ab-80c2-e0e6ced3f1de.JPG)
+
+
  <br>
 
 ใช้ข้อมูลจากไหน
