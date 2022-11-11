@@ -1,7 +1,8 @@
 #  uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+# uvicorn main:app --host 165.22.3.172 --port 8000 --reload
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from rec import reccomend,get_title,show_move,get_genres
+from rec import reccomend,get_title,show_move,get_genres,multi_reccommend
 app = FastAPI()
 
 origins = ["*"]
@@ -25,7 +26,11 @@ async def show_movie():
 @app.get('/get-reccom')
 async def get_data(title:str):
     return {'data':reccomend(title)}
-    
+
+@app.get('/get-reccom-2')
+async def get_data_2(title:str):
+    return {'data':multi_reccommend(title)}
+
 @app.get('show-all-genres')
 async def show_genres():
     return {'data':['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']}

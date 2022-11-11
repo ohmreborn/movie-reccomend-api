@@ -35,6 +35,46 @@ def reccomend(title):
         
         data.append(df.loc[i].to_dict())
     return data
+
+def multi_reccommend(title):
+    total_results = 0
+    all_movies = []
+    for m in title.split(','):
+        url = f"https://api.themoviedb.org/3/search/movie?api_key=0b4a78f3f6df40ca3779248e701f90e5&language=en-US&query={m}&page=1&include_adult=false"
+
+        payload={}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+
+        results = response.json()
+        total_results += int(results['total_results'])
+        results = results['results'][0]['original_title']
+        all_movies.append(results)
+
+    if total_results == 0 :
+            return 'there are no movie in this api'
+
+    df = pd.read_csv('movies.csv')
+        
+    movies = []
+    for i in all_movies:
+        movie = df[df['original_title'] == i].index.tolist()[0]
+        movies.append(movie)
+    vectorizer = CountVectorizer()
+    X = vectorizer.fit_transform(df['genre_ids']) 
+    genres = X[movies].toarray().sum(axis=0).reshape(-1,1)
+    df['score'] = X @ genres
+    df.drop(movies,axis=0,inplace=True)
+    df.sort_values(by='score',inplace=True,ascending=False)
+    df = df.head(10)
+    df = df.reset_index(drop=False)
+    data = []
+    for i in range(10):
+        
+        data.append(df.loc[i].to_dict())
+    return data
+
 def get_title(title):
     data = reccomend(title)
     if data == 'there are no movie in this api':
@@ -81,5 +121,5 @@ def show_move():
 
     return data
 if __name__ == "__main__":
-    # print(reccomend('02347018uoih98'))
-    print(get_genres('Action,Adventure'))
+    print(multi_reccommend('thor,the avenger'))
+    
