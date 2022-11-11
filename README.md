@@ -1,6 +1,7 @@
 reccomend ยังไง
-<a href="https://drive.google.com/uc?export=view&id=<[FILEID](https://drive.google.com/file/d/1oJspm_uMsb6UsNVlR5ZvQC9EH5T_ejta/view?usp=share_link)>"><img src="https://drive.google.com/uc?export=view&id=<FILEID>" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
+![IMG_4314](https://user-images.githubusercontent.com/98101484/201359838-c45e4c48-0f93-47c6-8f26-bcde0aff2542.JPG)
  <br>
+
 ใช้ข้อมูลจากไหน
  ใน ไฟล์ มี ฟังก์ชันอะไรบ้าง
  
