@@ -1,5 +1,5 @@
 reccomend ยังไง
-<img src="https://drive.google.com/file/d/1oJspm_uMsb6UsNVlR5ZvQC9EH5T_ejta/view?usp=share_link" title="Optional title">
+<img src="https://drive.google.com/uc?export=view&id=0B6wwyazyzml-OGQ3VUo0Z2thdmc" title="Optional title">
 ใช้ข้อมูลจากไหน
  ใน ไฟล์ มี ฟังก์ชันอะไรบ้าง
  
