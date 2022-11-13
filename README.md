@@ -1,8 +1,13 @@
+```
+http://165.22.3.172:8000/docs
+```
+
+
 api นี้ จะแนะนำตาม Content-based Filtering แล้ว Content-based Filtering คืออะไร ตัวอย่างเช่น 
 ถ้าเราชอบหนังแนว fantasy มันก็จะแนะนำหนัง ที่มีแนว fantasy อยู่ด้วย ดังรูป
 ![IMG_4314](https://user-images.githubusercontent.com/98101484/201359971-6f942d75-f813-47ab-80c2-e0e6ced3f1de.JPG)
 
-สามารถดู source code ได้จาก ไฟล์ rec.py
+สามารถดู source code ได้จาก เรื่องของ การแนะนำอย่างไรได้จาก ไฟล์ rec.py
 
 
 ใช้ข้อมูลจากไหน
