@@ -18,5 +18,13 @@ api นี้ จะแนะนำตาม Content-based Filtering แล้�
 ![Screenshot (85)](https://user-images.githubusercontent.com/98101484/201657351-ccd1ca55-ed9d-464b-982d-6c01c11177fd.png)
 ### แต่สามารถรันใน localhost ได้โดยใช้คำสั่งนี่ลงใน terminal
 ```bash
+python3 -m venv 'env_name'
+```
+
+```bash
+'env_name'\Scripts\activate
+```
+
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
