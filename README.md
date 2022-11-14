@@ -4,22 +4,18 @@
 
 
 api นี้ จะแนะนำตาม Content-based Filtering แล้ว Content-based Filtering คืออะไร ตัวอย่างเช่น 
-ถ้าเราชอบหนังแนว fantasy มันก็จะแนะนำหนัง ที่มีแนว fantasy อยู่ด้วย ดังรูป
+ถ้าเราชอบหนังแนว fantasy มันก็จะแนะนำหนัง ที่มีแนว fantasy แบบในรูป
 ![You](https://user-images.githubusercontent.com/98101484/201525513-2af1e7cf-d9b7-47b8-b991-d8e8cb4f4cd6.png)
 
 สามารถดู source code ได้จาก เรื่องของ การแนะนำอย่างไรได้จาก ไฟล์ rec.py
 
-
 ใช้ข้อมูลจากไหน
 ส่วนข้อมูลที่ใช้ จะเอามาจาก การดึงข้อมูลจาก api tmdb ทั้งหมด 7,278 เรื่อง 
-โดยมี การ clean ข้อมูลที่ ออกไปแล้ว
-ทำมไถึงใช้ข้อมูลนี้ 
-เพราะว่า api tmdb มีข้อมูล พวก รูป โปสเตอร์หนัง คำอธิบาย และ feature อื่นๆ ที่
-ที่มีความเหมาะสมให้นำไปดึงข้อมูลใช้ต่อ ในการ ทำเว็บ
-
+โดยมี การ clean ข้อมูลที่ ออกไปแล้ว ในไฟล์ movie.csv
  
- deploy เป็น api ยังไง มี หน้าไหนบ้าง
- ใช้ยังไง
+ส่วนการ เอาไปใช้ เป็น api นั้นผมใช้ fast-api ในการทำ เพราะ มี feature พิเศษ ที่สามารถ สร้าง หน้า docs ให้ อัตโนมัติ
+แบบนี้ 
+![Screenshot (85)](https://user-images.githubusercontent.com/98101484/201657351-ccd1ca55-ed9d-464b-982d-6c01c11177fd.png)
 ### แต่สามารถรันใน localhost ได้โดยใช้คำสั่งนี่ลงใน terminal
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
