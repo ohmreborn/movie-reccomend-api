@@ -17,14 +17,24 @@ api นี้ จะแนะนำตาม Content-based Filtering แล้�
 แบบนี้ 
 ![Screenshot (85)](https://user-images.githubusercontent.com/98101484/201657351-ccd1ca55-ed9d-464b-982d-6c01c11177fd.png)
 ### แต่สามารถรันใน localhost ได้โดยใช้คำสั่งนี่ลงใน terminal
+
+#### ซึ่งคนที่อ่าน git hub นี้ ก็สามารถ เอาไปใช้ได้อย่างง่ายๆโดยการ clone gtihub โดยใช้ python version 3.9.12 version 
+
+##จากนั้นก็ทำตามนี้
+สร้าง env
 ```bash
 python3 -m venv 'env_name'
 ```
 
+activate env
 ```bash
 'env_name'\Scripts\activate
 ```
-
+install library ต่างๆ
+```bash
+pip install -r /path/to/requirements.txt
+```
+รัน server ใน localhost
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
