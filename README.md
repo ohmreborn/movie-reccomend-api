@@ -6,7 +6,7 @@
 api นี้ จะแนะนำตาม Content-based Filtering แล้ว Content-based Filtering คืออะไร ตัวอย่างเช่น 
 ถ้าเราชอบหนังแนว fantasy มันก็จะแนะนำหนัง ที่มีแนว fantasy แบบในรูป
 ![You](https://user-images.githubusercontent.com/98101484/201525513-2af1e7cf-d9b7-47b8-b991-d8e8cb4f4cd6.png =100x20)
-
+<img src="[Assets/icon.png](https://user-images.githubusercontent.com/98101484/201525513-2af1e7cf-d9b7-47b8-b991-d8e8cb4f4cd6.png)" width="200">
 สามารถดู source code ได้จาก เรื่องของ การแนะนำอย่างไรได้จาก ไฟล์ rec.py
 
 ใช้ข้อมูลจากไหน
