@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from rec import reccomend,get_title,get_genres,multi_reccommend,get_by_id
+import uvicorn
 app = FastAPI()
 
 origins = ["*"]
@@ -38,3 +39,6 @@ def get_title_only(title:str):
 @app.get('show-all-genres')
 def show_genres():
     return {'data':['Action', 'Adventure', 'Animation', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'TV Movie', 'Thriller', 'War', 'Western']}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")

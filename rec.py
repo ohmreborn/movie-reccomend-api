@@ -54,9 +54,10 @@ def get_title(title,init=reccomend()):
     if results['total_results'] == 0 :
         return 'there are no movie in this api'
     results = results['results'][0]['id']
-    
-    score = cosine_similarity(init.y,init.y[results])
-    return pd.DataFrame(init.rank(score))['original_title'].tolist()
+    df = init.df
+    id = df[df['id'] == int(results)].index.item()
+    score = cosine_similarity(init.y,init.y[id])
+    return pd.DataFrame(init.rank(score,id))['original_title'].tolist()
 
 def get_genres(genres:str,init=reccomend()):
     gen = {'Action': '28', 'Adventure': '12', 'Animation': '16', 'Comedy': '35', 'Crime': '80', 'Documentary': '99', 'Drama': '18', 'Family': '10751', 'Fantasy': '14', 'History': '36', 'Horror': '27', 'Music': '10402', 'Mystery': '9648', 'Romance': '10749', 'Science Fiction': '878', 'TV Movie': '10770', 'Thriller': '53', 'War': '10752', 'Western': '37'}
